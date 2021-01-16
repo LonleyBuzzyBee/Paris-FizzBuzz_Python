@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"> 
+  <title>Fizzbuzz</title>
+</head>
+<body>
+  <div class="container">
+    <!-- <h1>👛 F ☆ I ☆ Z ☆ Z ☆ B ☆ U ☆ Z ☆ Z 👛</h1>
+    <p>Welcome to Mai & Lana's FizzBuzz project! FizzBuzz is a programming test, often used in software developer job interviews, to filter out 99.5% of candidates. It was invented by Imran Ghory and popularized by Jeff Atwood. </p> -->
+    <div class="front">
+      <form action="/" method="POST">
+        <label>How much do you love <br/> Paris Hilton?</label>
+        <input type="text" name="input" placeholder="From 1-100"/>
+        <div class="button-section">
+          <button type="submit">Press me</button>
+          <button type="submit">Cancel</button>
+        </div>
+      </form>
+      
+      <!-- {% if Paris %} -->
+      <p>{{ Paris }}</p>
+      <!-- {% endif %} -->
+    </div>
+  </div>
+</body>
+</html>
