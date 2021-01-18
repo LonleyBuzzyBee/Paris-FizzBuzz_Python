@@ -18,14 +18,15 @@
         <input type="text" name="input" placeholder="From 1-100"/>
         <div class="button-section">
           <button type="submit">Press me</button>
-          <button type="submit">Cancel</button>
+          <!-- <button type="submit">Cancel</button> -->
         </div>
       </form>
-      
-      <!-- {% if Paris %} -->
-      <p>{{ Paris }}</p>
-      <!-- {% endif %} -->
     </div>
+    {% if Paris %}
+    <div class="paris">
+      <p>{{ Paris }}</p>
+    </div>
+    {% endif %}
   </div>
 </body>
 </html>

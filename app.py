@@ -34,49 +34,18 @@ class Fizzbuzz:
 
 @app.route('/', methods=["POST", "GET"])
 def home():
+  Paris = ""
   if request.method == 'POST':
     input = request.form['input']
-    Paris = Fizzbuzz(input)
     
     while True:
       try:
-        if int(input):
-          if input < 1:
-            print("Please enter a number greater than 0.")
+        Paris = Fizzbuzz(input)
       except:
-        return "Not a valid input"
+        return "Not a valid input. Please enter an integer greater than 0."
       else:
         break
-  # if request.method == 'GET'
-  else:
-    # if Paris:
-    #   return render_template('index.html', Paris=Paris)
-    Paris = 0
-    return render_template('index.html', Paris=Paris)
-    
-
-
-
-
-@app.route('/', methods=["POST", "GET"])
-def home():
-  if request.method == 'POST':
-    input = request.form['input']
-    Paris = Fizzbuzz(input)
-    
-    while True:
-      try:
-        if int(input):
-          if input < 1:
-            print("Please enter a number greater than 0.")
-      except:
-        return "Not a valid input"
-      else:
-        break
-  # if request.method == 'GET'
-  else:
-    Paris = Fizzbuzz(input)
-    return render_template('index.html', Paris=Paris)
+  return render_template('index.html', Paris=Paris)
     
 
       
